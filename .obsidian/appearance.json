@@ -1,0 +1,17 @@
+{
+  "enabledCssSnippets": [
+    "Colored Sidebar Items",
+    "Daily Note Themes",
+    "CyanVoxel's General Tweaks",
+    "Notebook Backgrounds",
+    "Callouts",
+    "Improved Checkboxes"
+  ],
+  "cssTheme": "Vanilla AMOLED",
+  "interfaceFontFamily": "JetBrains Mono NL,JetBrains Mono",
+  "textFontFamily": "JetBrains Mono NL,JetBrains Mono",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font",
+  "theme": "obsidian",
+  "baseFontSize": 14,
+  "accentColor": ""
+}

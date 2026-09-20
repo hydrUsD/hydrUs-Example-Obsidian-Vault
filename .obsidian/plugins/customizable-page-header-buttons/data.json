@@ -1,0 +1,33 @@
+{
+  "enabledButtons": [
+    {
+      "id": "homepage:open-homepage",
+      "icon": "lucide-home",
+      "name": "Homepage: Open homepage",
+      "showButtons": "both"
+    },
+    {
+      "id": "obsidian-spaced-repetition:srs-review-flashcards-in-note",
+      "icon": "lucide-clipboard-list",
+      "name": "Spaced Repetition: Review flashcards in this note",
+      "showButtons": "both"
+    },
+    {
+      "id": "editor:open-search",
+      "icon": "lucide-search",
+      "name": "Search current file",
+      "showButtons": "both"
+    }
+  ],
+  "desktop": true,
+  "titleLeft": [],
+  "titleRight": [
+    {
+      "id": "homepage:open-homepage",
+      "icon": "lucide-home",
+      "name": "Homepage: Open homepage"
+    }
+  ],
+  "titleCenter": [],
+  "paneRelief": false
+}

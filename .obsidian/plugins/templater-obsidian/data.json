@@ -1,0 +1,24 @@
+{
+  "data_version": 2,
+  "command_timeout": 5,
+  "templates_folder": "99 - Meta/00 - Templates",
+  "templates_pairs": [],
+  "trigger_on_file_creation_mode": "none",
+  "auto_jump_to_cursor": false,
+  "jump_to_cursor_after_file_name": false,
+  "shell_path": "",
+  "user_scripts_folder": "99 - Meta/01 - Userscript",
+  "folder_templates": [
+    {
+      "folder": "06 - Daily",
+      "template": "99 - Meta/00 - Templates/(TEMPLATE) Daily.md"
+    }
+  ],
+  "file_templates": [],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": true,
+  "enabled_templates_hotkeys": [],
+  "startup_templates": [],
+  "intellisense_render": "1",
+  "ignore_folders_on_creation": []
+}

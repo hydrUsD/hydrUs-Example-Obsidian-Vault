@@ -1,0 +1,34 @@
+{
+  "pluginList": [
+    "VisibleReality/obsidian-html-entity",
+    "Quorafind/Obsidian-Big-Calendar"
+  ],
+  "pluginSubListFrozenVersion": [
+    {
+      "repo": "VisibleReality/obsidian-html-entity",
+      "version": "latest"
+    },
+    {
+      "repo": "Quorafind/Obsidian-Big-Calendar",
+      "version": ""
+    }
+  ],
+  "themesList": [
+    {
+      "repo": "xavwe/obsidian-nerdfont-theme",
+      "lastUpdate": "269251363"
+    }
+  ],
+  "updateAtStartup": true,
+  "updateThemesAtStartup": true,
+  "enableAfterInstall": true,
+  "loggingEnabled": false,
+  "loggingPath": "BRAT-log",
+  "loggingVerboseEnabled": false,
+  "debuggingMode": false,
+  "notificationsEnabled": true,
+  "globalTokenName": "",
+  "personalAccessToken": "",
+  "selectLatestPluginVersionByDefault": false,
+  "allowIncompatiblePlugins": false
+}

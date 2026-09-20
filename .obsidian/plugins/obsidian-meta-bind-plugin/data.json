@@ -1,0 +1,340 @@
+{
+  "devMode": false,
+  "ignoreCodeBlockRestrictions": false,
+  "preferredDateFormat": "YYYY-MM-DD",
+  "firstWeekday": {
+    "index": 1,
+    "name": "Monday",
+    "shortName": "Mo"
+  },
+  "syncInterval": 200,
+  "enableJs": true,
+  "viewFieldDisplayNullAsEmpty": false,
+  "enableSyntaxHighlighting": true,
+  "enableEditorRightClickMenu": true,
+  "inputFieldTemplates": [
+    {
+      "name": "taskDoneBy",
+      "declaration": "INPUT[inlineSelect(\n    option(Fabi),\n    option(Paul)\n):taskDoneBy]"
+    },
+    {
+      "name": "obsidianUIMode",
+      "declaration": "INPUT[toggle(\n    showcase,\n    onValue(preview),\n    offValue(source),\n    defaultValue(source)\n):obsidianUIMode]"
+    }
+  ],
+  "buttonTemplates": [
+    {
+      "label": "5-Minute Morning Kickstart",
+      "icon": "",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "create a new 5-Minute Kickstart Note",
+      "id": "5mkickstart",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "regexpReplaceInNote",
+          "regexp": "(`BUTTON\\[5mkickstart\\]`)",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - 5-Minute Kickstart\"%>]]**",
+          "regexpFlags": "g"
+        },
+        {
+          "type": "command",
+          "command": "templater-obsidian:replace-in-file-templater"
+        },
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "99 - Meta/00 - Templates/5mkickstart.md"
+        }
+      ]
+    },
+    {
+      "label": "5-Minute Evening Reflection",
+      "icon": "",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "create a new 5-Minute Reflection Note",
+      "id": "5mreflection",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "regexpReplaceInNote",
+          "regexp": "(`BUTTON\\[5mreflection\\]`)",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - 5-Minute Reflection\"%>]]**",
+          "regexpFlags": "g"
+        },
+        {
+          "type": "command",
+          "command": "templater-obsidian:replace-in-file-templater"
+        },
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "99 - Meta/00 - Templates/5mreflection.md"
+        }
+      ]
+    },
+    {
+      "label": "Stress & Anxiety Relief",
+      "icon": "",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "create a new Stress & Anxiety Relief Note",
+      "id": "SnArelief",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "regexpReplaceInNote",
+          "regexp": "(`BUTTON\\[SnArelief\\]`)",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Stress & Anxiety Relief\"%>]]**",
+          "regexpFlags": "g"
+        },
+        {
+          "type": "command",
+          "command": "templater-obsidian:replace-in-file-templater"
+        },
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "99 - Meta/00 - Templates/SnArelief.md"
+        }
+      ]
+    },
+    {
+      "label": "Mood Tracker",
+      "icon": "",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "create a new Mood Tracker Note",
+      "id": "moodTracker",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "regexpReplaceInNote",
+          "regexp": "(`BUTTON\\[moodTracker\\]`)",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Mood Tracker\"%>]]**",
+          "regexpFlags": "g"
+        },
+        {
+          "type": "command",
+          "command": "templater-obsidian:replace-in-file-templater"
+        },
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "99 - Meta/00 - Templates/moodTracker.md"
+        }
+      ]
+    },
+    {
+      "label": "Daily Highlights & Lowlights",
+      "icon": "",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "create a new Daily Highlights & Lowlights Note",
+      "id": "dailyHighLow",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "regexpReplaceInNote",
+          "regexp": "(`BUTTON\\[dailyHighLow\\]`)",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Daily Highlights & Lowlights\"%>]]**",
+          "regexpFlags": "g"
+        },
+        {
+          "type": "command",
+          "command": "templater-obsidian:replace-in-file-templater"
+        },
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "99 - Meta/00 - Templates/dailyHighLow.md"
+        }
+      ]
+    },
+    {
+      "label": "Gratitude Journal",
+      "icon": "",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "create a new Gratitude Journal Note",
+      "id": "gratitudeJournal",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "regexpReplaceInNote",
+          "regexp": "(`BUTTON\\[gratitudeJournal\\]`)",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Gratitude Journal\"%>]]**",
+          "regexpFlags": "g"
+        },
+        {
+          "type": "command",
+          "command": "templater-obsidian:replace-in-file-templater"
+        },
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "99 - Meta/00 - Templates/gratitudeJournal.md"
+        }
+      ]
+    },
+    {
+      "label": "Inspiration & Ideas Capture",
+      "icon": "",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "create a new Inspiration and Ideas Capture Note",
+      "id": "inspirationAndIdeas",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "regexpReplaceInNote",
+          "regexp": "(`BUTTON\\[inspirationAndIdeas\\]`)",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Inspiration & Ideas Capture\"%>]]**",
+          "regexpFlags": "g"
+        },
+        {
+          "type": "command",
+          "command": "templater-obsidian:replace-in-file-templater"
+        },
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "99 - Meta/00 - Templates/inspirationAndIdeas.md"
+        }
+      ]
+    },
+    {
+      "label": "Personal Reflection",
+      "icon": "",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "create a new Personal Reflection Note",
+      "id": "personalReflection",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "regexpReplaceInNote",
+          "regexp": "(`BUTTON\\[personalReflection\\]`)",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Personal Reflection\"%>]]**",
+          "regexpFlags": "g"
+        },
+        {
+          "type": "command",
+          "command": "templater-obsidian:replace-in-file-templater"
+        },
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "99 - Meta/00 - Templates/personalReflection.md"
+        }
+      ]
+    },
+    {
+      "label": "Reading Journal",
+      "icon": "",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "create a new Reading Journal Note",
+      "id": "readingJournal",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "regexpReplaceInNote",
+          "regexp": "(`BUTTON\\[readingJournal\\]`)",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Reading Journal\"%>]]**",
+          "regexpFlags": "g"
+        },
+        {
+          "type": "command",
+          "command": "templater-obsidian:replace-in-file-templater"
+        },
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "99 - Meta/00 - Templates/readingJournal.md"
+        }
+      ]
+    },
+    {
+      "label": "Skill Mastery Log",
+      "icon": "",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "create a new Skill Mastery Log Note",
+      "id": "skillMasteryLog",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "regexpReplaceInNote",
+          "regexp": "(`BUTTON\\[skillMasteryLog\\]`)",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Skill Mastery Log\"%>]]**",
+          "regexpFlags": "g"
+        },
+        {
+          "type": "command",
+          "command": "templater-obsidian:replace-in-file-templater"
+        },
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "99 - Meta/00 - Templates/skillMasteryLog.md"
+        }
+      ]
+    },
+    {
+      "label": "Add Task",
+      "icon": "",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "add a new Task for today",
+      "id": "addTaskButton",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "inlineJS",
+          "code": "const input = await this.quickAddApi.inputPrompt(\"✍\");\n",
+          "args": {}
+        },
+        {
+          "type": "inlineJS",
+          "code": "return `Input given: ${input}`;",
+          "args": {}
+        }
+      ]
+    },
+    {
+      "label": "Create Task",
+      "icon": "",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "create a new Task",
+      "id": "createTask",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "command",
+          "command": "obsidian-tasks-plugin:edit-task"
+        }
+      ]
+    }
+  ],
+  "excludedFolders": [
+    "templates"
+  ]
+}

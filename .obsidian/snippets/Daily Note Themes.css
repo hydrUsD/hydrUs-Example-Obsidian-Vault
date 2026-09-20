@@ -1,0 +1,716 @@
+/*──────────────────────────────────────────────────────────────────────────────
+         This file was based on Daily Note Themes by CyanVoxel v1.0.5
+
+These are a set of 7 main CSS classes that can be used to apply individual color
+schemes to daily notes for each day of the week.
+To customize the colors for each day, just swamp out the colors values under
+the main "day of the week" classes.
+
+NOTE: By default, this snippet relies on the "Bai Jamjuree" or
+"JetBrainsMono Nerd Font Mono" fonts. If you don't wish to use these, then just
+change or remove those font-family lines from this snippet.
+                
+──────────────────────────────────────────────────────────────────────────────*/
+:root {
+  --highlight: #ffffff;
+  --primary: #aaaaaa;
+  --dark: #333333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.daily {
+  .theme-dark .mermaid > svg { filter: none; }
+  --dark: var(--dark);
+  color: var(--highlight);
+  background-color: var(--dark);
+  --text-normal: var(--highlight);
+  --text-muted: var(--highlight);
+  --text-faint: var(--highlight);
+  --checklist-done-color: var(--highlight);
+  --metadata-label-text-color: var(--highlight);
+  --metadata-input-text-color: var(--highlight);
+  --tag-color: var(--dark);
+  --tag-background: var(--primary);
+  --hr-color: var(--primary);
+  --blockquote-border-color: var(--primary);
+  --blockquote-background-color: hsl(from var(--dark) h 21% 21%);
+  --interactive-accent: var(--primary);
+  --collapse-icon-color-collapsed: var(--primary);
+  --checkbox-color: var(--primary);
+  --checkbox-marker-color: var(--dark);
+  --checkbox-color-hover: var(--highlight);
+  --checkbox-border-color: var(--highlight);
+  --list-marker-color: var(--highlight);
+  --code-background: black;
+  --code-normal: var(--primary);
+  --codeblock-customizer-header-text-color: var(--italic-color);
+  --codeblock-customizer-header-language-tag-text-color: color-mix(in srgb, var(--dark) 42%, transparent 42%); 
+  --codeblock-customizer-inline-code-text-color: color-mix(in srgb, hsl(from var(--primary) h 80% calc(l + 42)) 100%, var(--italic-color) 21%);
+  --codeblock-customizer-inline-code-background-color: color-mix(in srgb, var(--primary) 63%, transparent 21%); 
+  --code-size: var(--h6-size);
+  --inline-code-padding-vertical: 0.1em;
+  code.codeblock-customizer-inline-code { 
+    font-weight: var(--h6-weight);
+    line-height: var(--h6-line-height);
+    text-shadow: 0 0 5px rgba(from var(--highlight), 0.8);
+  }
+  --table-border-color: var(--primary);
+  --table-text-color: var(--highlight);
+  --table-header-border-color: var(--primary);
+  --table-header-color: var(--bold-color);
+  
+  --background-modifier-border-focus: var(--primary);
+  --background-modifier-border: color-mix(
+          in srgb,
+          var(--highlight) 60%,
+          transparent
+  );
+  --background-modifier-hover: color-mix(
+          in srgb,
+          var(--highlight) 60%,
+          transparent
+  );
+  --pill-cover-hover: color-mix(in srgb, var(--highlight) 60%, transparent);
+  
+  mjx-container {
+    color: var(--bold-color);
+  }
+  .cm-iconize-icon > svg {
+    color: inherit;
+  }
+
+  .cm-em.cm-strong, strong > em, em > strong {
+    color: color-mix(in hsl, var(--bold-color) 68%, var(--italic-color) 42%);
+  }
+}
+/* 'https://coolors.co/color-picker' */
+/*───────────────────────────────────────────────
+ Mermaid
+───────────────────────────────────────────────*/
+.mermaid {
+  width: 100% !important;
+}
+.mermaid svg {
+  fill: var(--primary) !important;
+  width: 100% !important;
+  min-width: 100% !important;
+}
+.mermaid svg path {stroke: var(--dark) !important;}
+.mermaid svg rect.relationshipLabelBox {
+  fill: var(--italic-color) !important;
+  stroke: var(--dark) !important;
+  font-size: 14px !important;
+  height: 14px !important;
+  min-width: 100% !important;
+  text-align: center !important;
+}
+.mermaid svg g rect.entityBox {fill: var(--primary) !important;}
+.mermaid svg g rect.attributeBoxOdd {
+  fill: var(--highlight) !important; fill-opacity: 0.25 !important;
+}
+.mermaid svg g rect.attributeBoxEven {
+  fill: var(--dark) !important; fill-opacity: 0.25 !important;
+}
+.mermaid svg text.relationshipLabel {
+  fill: var(--dark) !important;
+  font-size: 10px !important;
+  text-align: center !important;
+}
+.mermaid svg g text {
+  fill: var(--highlight) !important;
+}
+
+/*───────────────────────────────────────────────
+ ganttDiagramm
+───────────────────────────────────────────────*/
+.mermaid svg g.grid,
+.mermaid svg g.grid path,
+.mermaid svg g rect.section {
+  width: 100% !important;
+  min-width: 100% !important;
+}
+.mermaid svg g rect.exclude-range {
+  stroke: var(--primary) !important;
+}
+.mermaid svg g.grid g.tick text {
+  fill: var(--primary) !important;
+}
+/*
+.mermaid svg g.grid g.tick
+.mermaid svg g.grid g.tick line
+.mermaid svg g rect.task
+.mermaid svg g text.taskText
+.mermaid svg g text.taskTextOutsideLeft
+.mermaid svg g text.taskTextOutsideRight
+.mermaid svg g.today
+.mermaid svg g.today line.today
+
+*/
+/*───────────────────────────────────────────────
+ erDiagram
+───────────────────────────────────────────────*/
+/*
+.mermaid svg path
+.mermaid svg g rect.entityBox
+.mermaid svg g rect.attributeBoxOdd
+.mermaid svg g rect.attributeBoxEven
+.mermaid svg g text.entityLabel
+.mermaid svg rect.relationshipLabelBox
+.mermaid svg text.relationshipLabel
+.mermaid svg text.entityTitleText
+
+*/
+/*───────────────────────────────────────────────
+ classDiagram
+───────────────────────────────────────────────*/
+/*
+.mermaid svg g.root g.clusters
+.mermaid svg g.root g.edgePaths path
+.mermaid svg g.root g.edgeLabels g.edgeLabel g.label foreignObject
+.mermaid svg g.root g.edgeLabels g.edgeLabel g.label foreignObject .labelBkg
+.mermaid svg g.root g.edgeLabels g.edgeLabel g.label foreignObject .labelBkg .edgeLabel
+.mermaid svg g.root g.edgeLabels g.edgeLabel g.label foreignObject .labelBkg .edgeLabel p
+.mermaid svg g.root g.nodes g.node g.basic.label-container path
+.mermaid svg g.root g.nodes g.node g.annotation-group.text
+.mermaid svg g.root g.nodes g.node g.label-group.text g.label foreignObject
+.mermaid svg g.root g.nodes g.node g.label-group.text g.label foreignObject .nodeLabel
+.mermaid svg g.root g.nodes g.node g.label-group.text g.label foreignObject .nodeLabel p
+.mermaid svg g.root g.nodes g.node g.members-group.text g.label foreignObject
+.mermaid svg g.root g.nodes g.node g.members-group.text g.label foreignObject .nodeLabel
+.mermaid svg g.root g.nodes g.node g.members-group.text g.label foreignObject .nodeLabel p
+.mermaid svg g.root g.nodes g.node g.methods-group.text g.label foreignObject
+.mermaid svg g.root g.nodes g.node g.methods-group.text g.label foreignObject .nodeLabel
+.mermaid svg g.root g.nodes g.node g.methods-group.text g.label foreignObject .nodeLabel p
+.mermaid svg g.root g.nodes g.node g.divider path
+.mermaid svg text.classDiagramTitleText
+*/
+
+/*───────────────────────────────────────────────
+ classDiagram
+───────────────────────────────────────────────*/
+/*
+.mermaid svg g.root g.clusters
+.mermaid svg g.root g.edgePaths path
+.mermaid svg g.root g.edgeLabels g.edgeLabel g.label foreignObject
+.mermaid svg g.root g.edgeLabels g.edgeLabel g.label foreignObject .labelBkg
+.mermaid svg g.root g.edgeLabels g.edgeLabel g.label foreignObject .labelBkg .edgeLabel
+.mermaid svg g.root g.edgeLabels g.edgeLabel g.label foreignObject .labelBkg .edgeLabel p
+.mermaid svg g.root g.nodes g.node g.basic.label-container path
+.mermaid svg g.root g.nodes g.node g.annotation-group.text
+.mermaid svg g.root g.nodes g.node g.label-group.text g.label foreignObject
+.mermaid svg g.root g.nodes g.node g.label-group.text g.label foreignObject .nodeLabel
+.mermaid svg g.root g.nodes g.node g.label-group.text g.label foreignObject .nodeLabel p
+.mermaid svg g.root g.nodes g.node g.members-group.text g.label foreignObject
+.mermaid svg g.root g.nodes g.node g.members-group.text g.label foreignObject .nodeLabel
+.mermaid svg g.root g.nodes g.node g.members-group.text g.label foreignObject .nodeLabel p
+.mermaid svg g.root g.nodes g.node g.methods-group.text g.label foreignObject
+.mermaid svg g.root g.nodes g.node g.methods-group.text g.label foreignObject .nodeLabel
+.mermaid svg g.root g.nodes g.node g.methods-group.text g.label foreignObject .nodeLabel p
+.mermaid svg g.root g.nodes g.node g.divider path
+.mermaid svg text.classDiagramTitleText
+*/
+
+/*───────────────────────────────────────────────
+ flowchart
+───────────────────────────────────────────────*/
+/*
+.mermaid svg g g.root g.clusters
+.mermaid svg g g.root g.edgePaths path
+.mermaid svg g.root g.edgeLabels g.edgeLabel g.label foreignObject
+.mermaid svg g.root g.edgeLabels g.edgeLabel g.label foreignObject .labelBkg
+.mermaid svg g.root g.edgeLabels g.edgeLabel g.label foreignObject .labelBkg .edgeLabel
+.mermaid svg g.root g.edgeLabels g.edgeLabel g.label foreignObject .labelBkg .edgeLabel p
+.mermaid svg g g.root g.nodes g.node rect.basic.label-container
+.mermaid svg g g.root g.nodes g.node g.label rect
+.mermaid svg g g.root g.nodes g.node g.label foreignObject
+.mermaid svg g g.root g.nodes g.node g.label foreignObject .nodeLabel
+.mermaid svg g g.root g.nodes g.node g.label foreignObject .nodeLabel p
+.mermaid svg text.flowchartTitleText
+*/
+
+/*───────────────────────────────────────────────
+ sequenceDiagram
+───────────────────────────────────────────────*/
+/*
+.mermaid svg g rect.actor.actor-botton
+.mermaid svg g text.actor.actor-box
+.mermaid svg g text.actor.actor-box tspan
+.mermaid svg g line.actor-line
+.mermaid svg g g rect.actor.actor-top
+.mermaid svg g g text.actor.actor-box tspan
+.mermaid svg g line.loopLine
+.mermaid svg g polygon.labelBox
+.mermaid svg g text.labelText
+.mermaid svg g text.loopText
+.mermaid svg g text.loopText tspan
+.mermaid svg g rect.note
+.mermaid svg g text.noteText
+.mermaid svg g text.noteText tspan
+.mermaid svg text.messageText
+.mermaid svg line.messageLine0
+.mermaid svg line.messageLine1
+.mermaid svg text
+*/
+
+/*───────────────────────────────────────────────
+ gitGraph
+───────────────────────────────────────────────*/
+/*
+.mermaid svg g.commit-bullets circle.commit
+.mermaid svg g.commit-labels g rect.commit-label-bkg
+.mermaid svg g.commit-labels g text.commit-label
+.mermaid svg g line.branch
+.mermaid svg g rect.branchLabelBkg
+.mermaid svg g rect.branchLabelBkg g.branchLabel
+.mermaid svg g rect.branchLabelBkg g.branchLabel g.label
+.mermaid svg g rect.branchLabelBkg g.branchLabel g.label text
+.mermaid svg g rect.branchLabelBkg g.branchLabel g.label text tspan.row
+.mermaid svg g text.branchLabel
+.mermaid svg g.commit-arrows path.arrow
+.mermaid svg text.gitTitleText
+*/
+
+/*───────────────────────────────────────────────
+ userJourneyDiagram
+───────────────────────────────────────────────*/
+/*
+.mermaid svg g rect.journey-section
+.mermaid svg g switch foreignObject
+.mermaid svg g switch foreignObject .journey-section
+.mermaid svg g switch foreignObject .journey-section .label
+.mermaid svg g switch text.journey-section
+.mermaid svg g switch text.journey-section tspan
+.mermaid svg g line.task-line
+.mermaid svg g circle.face
+.mermaid svg g g circle
+.mermaid svg g g path.mouth
+.mermaid svg g rect.task
+.mermaid svg g circle.actor-1
+.mermaid svg g circle.actor-1 title
+.mermaid svg g switch foreignObject .task
+.mermaid svg g switch foreignObject .task .label
+.mermaid svg g switch text.task
+.mermaid svg g switch text.task tspan
+.mermaid svg circle.actor-0
+.mermaid svg circle.actor-1
+.mermaid svg text.legend
+.mermaid svg text.legend tspan
+.mermaid svg text
+.mermaid svg line
+*/
+
+/*───────────────────────────────────────────────
+ quadrantChart
+───────────────────────────────────────────────*/
+/*
+.mermaid svg g.main g.quadrants g.quadrant rect
+.mermaid svg g.main g.quadrants g.quadrant text
+.mermaid svg g.main g.border line
+.mermaid svg g.main g.data-points g.data-point circle
+.mermaid svg g.main g.data-points g.data-point text
+.mermaid svg g.main g.labels g.label text
+.mermaid svg g.main g.title text
+*/
+
+/*───────────────────────────────────────────────
+ xyChart
+───────────────────────────────────────────────*/
+/*
+.mermaid svg g.main
+.mermaid svg g.main rect.background
+.mermaid svg g.main g.chart-title text
+.mermaid svg g.main g.plot g.bar-plot-0 rect
+.mermaid svg g.main g.plot g.line-plot-1 path
+.mermaid svg g.main g.bottom-axis g.axis-line path
+.mermaid svg g.main g.bottom-axis g.label text
+.mermaid svg g.main g.bottom-axis g.ticks path
+.mermaid svg g.main g.left-axis g.axis-line path
+.mermaid svg g.main g.left-axis g.label text
+.mermaid svg g.main g.left-axis g.ticks path
+.mermaid svg g.main g.left-axis g.title text
+.mermaid svg g.mermaid-tmp-group
+*/
+
+.mermaid svg text.titleText,
+.mermaid svg text.entityTitleText,
+.mermaid svg g text.sectionTitle {
+  fill: var(--bold-color) !important;
+}
+
+/*───────────────────────────────────────────────
+	Colot-Theme Classes
+───────────────────────────────────────────────*/
+.sunday,
+.Sunday {
+  --highlight: hsl(from var(--primary) h 30% 95%); /* #f6eef0 */
+  --primary: #f6466f;
+  --secondary: #F5458C;
+  --dark: hsl(from var(--primary) h 40% 15%); /* #36171e */
+  --bold-color: hsl(from var(--primary) h 85% 60%); /* #f0426b */
+  --italic-color: hsl(from var(--primary) h 85% 85%); /* #f9b8c7 */
+}
+.monday,
+.Monday {
+  --highlight: hsl(from var(--primary) h 30% 95%); /* #f6efee */
+  --primary: #f65848;
+  --secondary: #F54753;
+  --dark: hsl(from var(--primary) h 40% 15%); /* #361a17 */
+  --bold-color: hsl(from var(--primary) h 85% 60%); /* #f05242 */
+  --italic-color: hsl(from var(--primary) h 85% 85%); /* #f9beb8 */
+}
+.tuesday,
+.Tuesday {
+  --highlight: hsl(from var(--primary) h 30% 95%); /* #eef2f6 */
+  --primary: #3b87f0;
+  --secondary: #3CA6F0;
+  --dark: hsl(from var(--primary) h 40% 15%); /* #172436 */
+  --bold-color: hsl(from var(--primary) h 85% 60%); /* #428bf0 */
+  --italic-color: hsl(from var(--primary) h 85% 85%); /* #b8d4f9 */
+}
+.wednesday,
+.Wednesday {
+  --highlight: hsl(from var(--primary) h 30% 95%); /* #f6f4ee */
+  --primary: #ffd63d;
+  --secondary: #FFB43D;
+  --dark: hsl(from var(--primary) h 40% 15%); /* #362f17 */
+  --bold-color: hsl(from var(--primary) h 85% 60%); /* #f0cb42 */
+  --italic-color: hsl(from var(--primary) h 85% 85%); /* #f9ecb8 */
+
+}
+.thursday,
+.Thursday {
+  --highlight: hsl(from var(--primary) h 30% 95%); /* #f6f1ee */
+  --primary: #ed6022;
+  --secondary: #ED3B21;
+  --dark: hsl(from var(--primary) h 40% 15%); /* #362017 */
+  --bold-color: hsl(from var(--primary) h 85% 60%); /* #f07742 */
+  --italic-color: hsl(from var(--primary) h 85% 85%); /* #f9ccb8 */
+}
+.friday,
+.Friday {
+  --highlight: hsl(from var(--primary) h 30% 95%); /* #f2f6ee */
+  --primary: #92e649;
+  --secondary: #ADE649;
+  --dark: hsl(from var(--primary) h 40% 15%); /* #253617 */
+  --bold-color: hsl(from var(--primary) h 85% 60%); /* #93f042 */
+  --italic-color: hsl(from var(--primary) h 85% 85%); /* #d6f9b8 */
+}
+.saturday,
+.Saturday {
+  --highlight: hsl(from var(--primary) h 30% 95%); /* #f6eeef */
+  --primary: #e22c3c;
+  --secondary: #E32B5A;
+  --dark: hsl(from var(--primary) h 40% 15%); /* #36171a */
+  --bold-color: hsl(from var(--primary) h 85% 60%); /* #f04252 */
+  --italic-color: hsl(from var(--primary) h 85% 85%); /* #f9b8be */
+}
+.nordDoc,
+.NordDoc,
+.NordDoc,
+.norddoc {
+  --highlight: hsl(from var(--primary) h 30% 95%); /* nord8 - frost teal */
+  --primary: #88c0d0; /* nord9 - frost light blue */
+  --dark: hsl(from var(--primary) h 40% 15%); /* nord0 - background dark */
+  --bold-color: hsl(from var(--primary) h 85% 60%);
+  --italic-color: hsl(from var(--primary) h 85% 85%);
+}
+
+/*───────────────────────────────────────────────
+	.daily Element Changes
+───────────────────────────────────────────────*/
+.daily :is(h1, .HyperMD-header.HyperMD-header-1) {
+  color: var(--primary);
+  text-align: center;
+  font-size: 60px;
+  font-family: "Bai Jamjuree", "JetBrainsMono Nerd Font Mono", "JetBrains Mono";
+  padding: 0 !important;
+}
+.daily :is(h2, .HyperMD-header.HyperMD-header-2) {
+  color: var(--highlight);
+  text-align: center;
+  font-size: 30px;
+  font-family: "Bai Jamjuree", "JetBrainsMono Nerd Font Mono", "JetBrains Mono";
+  font-style: italic;
+  padding: 0 !important;
+}
+.daily :is(h3, .HyperMD-header.HyperMD-header-3) {
+  color: var(--primary);
+  text-align: center;
+
+  font-size: 32px;
+  font-family: "Bai Jamjuree", "JetBrainsMono Nerd Font Mono", "JetBrains Mono";
+  padding-top: 0;
+}
+.daily :is(h4, .HyperMD-header.HyperMD-header-4) {
+  background-color: var(--primary);
+  color: var(--dark);
+  /* border-color: var(--primary); */
+  /* font-family: "JetBrainsMono Nerd Font Mono", "JetBrains Mono", monospace; */
+  font-weight: 900;
+  margin-bottom: 0;
+  padding-top: 0;
+  font-size: 20px;
+  width: fit-content;
+  padding-left: 6px;
+  padding-right: 6px;
+  /* border: solid; */
+  border-radius: 8px;
+  /* border-width: 2px; */
+  word-wrap: normal;
+}
+.daily :is(div.cm-active.HyperMD-header.HyperMD-header-4.cm-line) {
+  color: var(--highlight);
+}
+.daily :is(h5, .HyperMD-header.HyperMD-header-5), .daily .todoist-query-title {
+  color: var(--italic-color);
+  font-style: italic;
+  width: fit-content;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-left: 8px;
+  border: 2px var(--italic-color) solid;
+  border-radius: 8px;
+
+}
+.daily p {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.daily :is(a:link, .cm-hmd-internal-link) {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: underline var(--highlight);
+}
+.daily :is(a:hover, .cm-hmd-internal-link:hover) {
+  color: var(--highlight);
+}
+.daily hr {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+.daily img {
+  display: block !important;
+  margin: 16px auto !important;
+  /* margin-left: auto !important;
+  margin-right: auto !important; */
+  border: 6px solid var(--primary);
+  border-radius: 12px;
+  box-shadow: 16px 8px 8px color-mix(in srgb, var(--highlight) 70%, transparent);
+}
+:is(
+    .sunday,
+    .Sunday,
+    .monday,
+    .Monday,
+    .tuesday,
+    .Tuesday,
+    .wednesday,
+    .Wednesday,
+    .thursday,
+    .Thursday,
+    .friday,
+    .Friday,
+    .saturday,
+    .Saturday,
+    .nordDoc,
+    .NordDoc,
+    .NordDoc,
+    .norddoc
+  )
+svg {
+	--icon-color: color-mix(in srgb, var(--highlight) 60%, transparent) !important;
+  color: var(--icon-color);
+}
+
+/*───────────────────────────────────────────────
+	Gerneral .daily Callout Changes
+───────────────────────────────────────────────*/
+/* Adjust layout for 'journal-button' callouts */
+.callout, .callout .callout-title, .callout .callout-content {
+  border: 2px solid var(--italic-color) !important;
+}
+.callout .callout-content {
+	border-top: none !important;	
+}
+.callout .callout-icon .svg-icon, .callout .callout-title, .callout .callout-title .callout-title-inner {
+  color: var(--bold-color) !important;
+}
+
+/*───────────────────────────────────────────────
+	Daily Note: Journal Button Callouts
+───────────────────────────────────────────────*/
+.callout[data-callout="journal-button"] .callout-title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+  align-content: stretch !important;
+  align-items: stretch !important;
+}
+.callout[data-callout="journal-button"] .callout-title-inner {
+  width: 100% !important;
+  height: auto !important;
+  text-align: center;
+}
+/* Ensure the Meta Bind button spans full width in 'journal-button' callouts */
+.callout[data-callout="journal-button"] .callout-title .mb-button > button {
+  width: 100% !important;
+  align-self: center;
+  display: block;
+  color: var(--dark);
+  font-weight: 700;
+  text-align: center !important;
+}
+.callout[data-callout="journal-button"] .callout-title .mb-button > button:hover,
+&:focus {
+  background-color: var(--bold-color) !important;
+}
+.callout[data-callout="journal-button"] .callout-action-buttons .callout-copy-button {
+	display: none;
+}
+
+@media print { 
+    .print .markdown-preview-view {
+        -webkit-print-color-adjust: exact !important;
+        background-color: var(--dark) !important;
+        color: var(--highlight) !important;
+    }
+}
+/*───────────────────────────────────────────────
+   Daily Note Theme: dndDoc
+   Inspired by DnD 5e LaTeX template
+───────────────────────────────────────────────*/
+
+.dndDoc {
+  --bg-primary: #f1e7cf;
+  --bg-secondary: #e6dbc2;
+  --bg-sidebar: #ece1ce;
+  --bg-comment: #efe6d1;
+  --bg-highlight: #dbc8a8;
+
+  --text-primary: #32251c;
+  --text-secondary: #4e3c2a;
+  --text-heading: #6d2d1f;
+  --text-strong: #a13d2f;
+
+  --accent-color: #b75c3c;
+  --border-color: var(--text-strong);
+
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.dndDoc h1,
+.dndDoc h2,
+.dndDoc h3,
+.dndDoc h4,
+.dndDoc h5 {
+  color: var(--text-heading);
+  /* font-family: "EB Garamond", serif; */
+}
+
+.dndDoc strong {
+  color: var(--text-strong);
+}
+
+.dndDoc em {
+  color: var(--accent-color);
+  font-style: italic;
+}
+
+.dndDoc blockquote {
+  background-color: var(--bg-comment);
+  border-left: 4px solid var(--border-color);
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.dndDoc code[class*="language-"] {
+  --code-important: #933216;
+  --code-normal: #222222;
+  font-weight: 750;
+  padding: 0.5em 1em !important;
+  box-sizing: content-box;
+  border: 5px double #933216 !important;
+  background: #F4DCB2;
+  background-color: #F4DCB2;
+}
+
+.dndDoc table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.dndDoc th,
+.dndDoc td {
+  border: 1px solid var(--border-color);
+  padding: 0.5em;
+}
+
+.dndDoc th {
+  background-color: var(--bg-highlight);
+  color: var(--text-strong); /* darker tone instead of white */
+  font-weight: bold;
+}
+
+.dndDoc tr:nth-child(even) {
+  background-color: var(--bg-comment);
+}
+
+.dndDoc hr {
+  border: none;
+  border-top: 2px solid var(--border-color);
+  margin: 1em 0;
+}
+/* Hide only the Work block on Sat/Sun in READING VIEW */
+/*
+
+.saturday div.el-h3 > h3[data-heading="Work"],
+.sunday div.el-h3 > h3[data-heading="Work"] {
+  display: none !important;
+}
+.saturday div.el-h5 > h5[data-heading="${currentFile1}"],
+.sunday div.el-h5 > h5[data-heading="${currentFile1}"],
+.saturday div.el-h5 + div.el-ul > ul,
+.sunday div.el-h5 + div.el-ul > ul {
+  display: none !important;
+}
+.saturday div.el-h4 > h4[data-heading="Commit-Message vor Feierabend"],
+.sunday div.el-h4 > h4[data-heading="Commit-Message vor Feierabend"],
+.saturday div.el-h4 + div.el-pre > pre.language-markdown,
+.sunday div.el-h4 + div.el-pre > pre.language-markdown,
+.saturday div.el-h4 + div.el-pre + div.el-hr,
+.sunday div.el-h4 + div.el-pre + div.el-hr{
+  display: none !important;
+}
+.saturday div:nth-child(33) + div.HyperMD-header.HyperMD-header-3,
+.sunday div:nth-child(33) + div.HyperMD-header.HyperMD-header-3,
+.saturday div.HyperMD-header.HyperMD-header-3 + div.HyperMD-header.HyperMD-header-5,
+.sunday div.HyperMD-header.HyperMD-header-3 + div.HyperMD-header.HyperMD-header-5,
+.saturday div.HyperMD-header.HyperMD-header-3 + div.HyperMD-header.HyperMD-header-5 + div.HyperMD-list-line.HyperMD-list-line-1,
+.sunday div.HyperMD-header.HyperMD-header-3 + div.HyperMD-header.HyperMD-header-5 + div.HyperMD-list-line.HyperMD-list-line-1,
+.saturday div.HyperMD-header.HyperMD-header-3 + div.HyperMD-header.HyperMD-header-5 + div.HyperMD-list-line.HyperMD-list-line-1 + div.cm-line,
+.sunday div.HyperMD-header.HyperMD-header-3 + div.HyperMD-header.HyperMD-header-5 + div.HyperMD-list-line.HyperMD-list-line-1 + div.cm-line,
+.saturday div.HyperMD-header.HyperMD-header-3 + div.HyperMD-header.HyperMD-header-5 + div.HyperMD-list-line.HyperMD-list-line-1 + div.cm-line + div.HyperMD-header.HyperMD-header-4,
+.sunday div.HyperMD-header.HyperMD-header-3 + div.HyperMD-header.HyperMD-header-5 + div.HyperMD-list-line.HyperMD-list-line-1 + div.cm-line + div.HyperMD-header.HyperMD-header-4 {
+display: none !important;
+}
+div.HyperMD-codeblock.HyperMD-codeblock-begin.HyperMD-codeblock-begin-bg.HyperMD-codeblock-bg.cm-line,
+div.HyperMD-codeblock.HyperMD-codeblock-begin.HyperMD-codeblock-begin-bg.HyperMD-codeblock-bg.cm-line + div:nth-child(40),
+div.HyperMD-codeblock.HyperMD-codeblock-begin.HyperMD-codeblock-begin-bg.HyperMD-codeblock-bg.cm-line + div:nth-child(40) + div.HyperMD-codeblock.HyperMD-codeblock-bg.HyperMD-codeblock-end.HyperMD-codeblock-end-bg.cm-line,
+div.HyperMD-codeblock.HyperMD-codeblock-begin.HyperMD-codeblock-begin-bg.HyperMD-codeblock-bg.cm-line + div:nth-child(40) + div.HyperMD-codeblock.HyperMD-codeblock-bg.HyperMD-codeblock-end.HyperMD-codeblock-end-bg.cm-line + div.cm-line {
+ display: none !important
+ }
+*/

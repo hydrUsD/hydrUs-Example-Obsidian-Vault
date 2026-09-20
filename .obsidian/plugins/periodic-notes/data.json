@@ -1,0 +1,32 @@
+{
+  "showGettingStartedBanner": false,
+  "hasMigratedDailyNoteSettings": false,
+  "hasMigratedWeeklyNoteSettings": false,
+  "daily": {
+    "format": "YYYYMMDD",
+    "template": "99 - Meta/00 - Templates/(TEMPLATE) Daily.md",
+    "folder": "06 - Daily",
+    "enabled": true
+  },
+  "weekly": {
+    "format": "YYYYMMDD - [W]ww",
+    "template": "99 - Meta/00 - Templates/(TEMPLATE) Partner Meeting.md",
+    "folder": "04 - Permanent/Partner Mettings",
+    "enabled": true
+  },
+  "monthly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "quarterly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "yearly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  }
+}

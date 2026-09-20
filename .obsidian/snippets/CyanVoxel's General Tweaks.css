@@ -1,0 +1,132 @@
+/* CyanVoxel's General Tweaks */
+
+.theme-light,
+.theme-dark {
+  --link-decoration: none;
+  --bold-modifier : 300;
+}
+
+h1 {
+  margin-top: 20px !important;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.image-borders img {
+  border: solid;
+  /* border-width: 1em; */
+  border-width: 2px;
+  /* border-radius: 6px; */
+  border-color: rgba(122, 122, 122, 0.2);
+}
+
+.markdown-preview-view img {
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.callout {
+  border-radius: 12px;
+  border-width: 2px;
+}
+
+.task-list-item-checkbox {
+  border-width: 2px;
+}
+
+#calendar-container .title {
+  font-size: 18px;
+}
+
+.center-images img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.no-embed-border {
+  --embed-border-left: 0px solid black !important;
+}
+
+/* .markdown-preview-view */
+.markdown-preview-view {
+  border-radius: 6px;
+}
+
+.center-titles
+  :is(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .HyperMD-header.HyperMD-header-1,
+    .HyperMD-header.HyperMD-header-2,
+    .HyperMD-header.HyperMD-header-3,
+    .HyperMD-header.HyperMD-header-4,
+    .HyperMD-header.HyperMD-header-5,
+    .HyperMD-header.HyperMD-header-6
+  ) {
+  text-align: center;
+}
+
+code {
+  font-family: "JetBrainsMono Nerd Font Mono", monospace;
+}
+
+/*───────────────────────────────────────────────
+  📄 Obsidian PDF Export – Page Break Management
+────────────────────────────────────────────────*/
+
+/* === Block elements that should NOT break inside === */
+.el-ul,
+.el-ol,
+.el-p,
+.el-table,
+.el-code-block,
+.el-callout,
+.el-callout-content {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* === Prevent blockquotes and horizontal rules from starting a new page === */
+.el-hr,
+.el-blockquote {
+  page-break-before: avoid;
+  break-before: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* === Prevent headings from being orphaned at the bottom === */
+.el-h1,
+.el-h2,
+.el-h3,
+.el-h4,
+.el-h5,
+.el-h6 {
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+/* === Manual forced page break === */
+.pb {
+  page-break-after: always;
+  break-after: always;
+}
+
+/* === Optional: Grouped content wrapper to avoid page splitting === */
+.no-pb {
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: block;
+}

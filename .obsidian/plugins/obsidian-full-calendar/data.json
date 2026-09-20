@@ -1,0 +1,39 @@
+{
+  "calendarSources": [
+    {
+      "type": "dailynote",
+      "color": "hsl(258, 88%, 66%)",
+      "heading": "Tasks"
+    },
+    {
+      "type": "caldav",
+      "name": "Privat",
+      "url": "https://caldav.icloud.com",
+      "homeUrl": "https://caldav.icloud.com/8232355850/calendars/home/",
+      "color": "#34AADC",
+      "username": "paul.heuwer@gmail.com",
+      "password": "zquz-mtox-ngke-tshb"
+    },
+    {
+      "type": "caldav",
+      "name": "Arbeit",
+      "url": "https://caldav.icloud.com",
+      "homeUrl": "https://caldav.icloud.com/8232355850/calendars/work/",
+      "color": "#CC73E1",
+      "username": "paul.heuwer@gmail.com",
+      "password": "zquz-mtox-ngke-tshb"
+    },
+    {
+      "type": "ical",
+      "color": "hsl(258, 88%, 66%)",
+      "url": "webcal://p116-caldav.icloud.com/published/2/ODIzMjM1NTg1MDgyMzIzNWWjudtUbt_HiNxvgDkpAO9jgahTKhqb0Favcb36H965"
+    }
+  ],
+  "defaultCalendar": 0,
+  "firstDay": 0,
+  "initialView": {
+    "desktop": "timeGridWeek",
+    "mobile": "timeGrid3Days"
+  },
+  "timeFormat24h": true
+}
