@@ -40,5 +40,7 @@
   "obsidian-excel-to-markdown-table",
   "better-export-pdf",
   "table-editor-obsidian",
-  "simple-table-math"
+  "simple-table-math",
+  "circuit-sketcher",
+  "obsidian-circuitjs"
 ]

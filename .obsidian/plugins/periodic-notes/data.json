@@ -9,9 +9,9 @@
     "enabled": true
   },
   "weekly": {
-    "format": "YYYYMMDD - [W]ww",
-    "template": "99 - Meta/00 - Templates/(TEMPLATE) Partner Meeting.md",
-    "folder": "04 - Permanent/Partner Mettings",
+    "format": "gggg-[W]ww - MMM -",
+    "template": "99 - Meta/00 - Templates/(TEMPLATE) Weekly.md",
+    "folder": "04 - Permanent/00 - Ausbildungsnachweise",
     "enabled": true
   },
   "monthly": {

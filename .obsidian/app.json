@@ -33,5 +33,6 @@
     "command-palette:open"
   ],
   "readableLineLength": true,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true
 }
