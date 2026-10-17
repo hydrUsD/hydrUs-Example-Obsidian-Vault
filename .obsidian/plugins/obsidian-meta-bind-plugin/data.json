@@ -2,11 +2,7 @@
   "devMode": false,
   "ignoreCodeBlockRestrictions": false,
   "preferredDateFormat": "YYYY-MM-DD",
-  "firstWeekday": {
-    "index": 1,
-    "name": "Monday",
-    "shortName": "Mo"
-  },
+  "firstWeekday": "Monday",
   "syncInterval": 200,
   "enableJs": true,
   "viewFieldDisplayNullAsEmpty": false,
@@ -37,8 +33,8 @@
         {
           "type": "regexpReplaceInNote",
           "regexp": "(`BUTTON\\[5mkickstart\\]`)",
-          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - 5-Minute Kickstart\"%>]]**",
-          "regexpFlags": "g"
+          "regexpFlags": "g",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - 5-Minute Kickstart\"%>]]**"
         },
         {
           "type": "command",
@@ -64,8 +60,8 @@
         {
           "type": "regexpReplaceInNote",
           "regexp": "(`BUTTON\\[5mreflection\\]`)",
-          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - 5-Minute Reflection\"%>]]**",
-          "regexpFlags": "g"
+          "regexpFlags": "g",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - 5-Minute Reflection\"%>]]**"
         },
         {
           "type": "command",
@@ -91,8 +87,8 @@
         {
           "type": "regexpReplaceInNote",
           "regexp": "(`BUTTON\\[SnArelief\\]`)",
-          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Stress & Anxiety Relief\"%>]]**",
-          "regexpFlags": "g"
+          "regexpFlags": "g",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Stress & Anxiety Relief\"%>]]**"
         },
         {
           "type": "command",
@@ -118,8 +114,8 @@
         {
           "type": "regexpReplaceInNote",
           "regexp": "(`BUTTON\\[moodTracker\\]`)",
-          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Mood Tracker\"%>]]**",
-          "regexpFlags": "g"
+          "regexpFlags": "g",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Mood Tracker\"%>]]**"
         },
         {
           "type": "command",
@@ -145,8 +141,8 @@
         {
           "type": "regexpReplaceInNote",
           "regexp": "(`BUTTON\\[dailyHighLow\\]`)",
-          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Daily Highlights & Lowlights\"%>]]**",
-          "regexpFlags": "g"
+          "regexpFlags": "g",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Daily Highlights & Lowlights\"%>]]**"
         },
         {
           "type": "command",
@@ -172,8 +168,8 @@
         {
           "type": "regexpReplaceInNote",
           "regexp": "(`BUTTON\\[gratitudeJournal\\]`)",
-          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Gratitude Journal\"%>]]**",
-          "regexpFlags": "g"
+          "regexpFlags": "g",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Gratitude Journal\"%>]]**"
         },
         {
           "type": "command",
@@ -199,8 +195,8 @@
         {
           "type": "regexpReplaceInNote",
           "regexp": "(`BUTTON\\[inspirationAndIdeas\\]`)",
-          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Inspiration & Ideas Capture\"%>]]**",
-          "regexpFlags": "g"
+          "regexpFlags": "g",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Inspiration & Ideas Capture\"%>]]**"
         },
         {
           "type": "command",
@@ -226,8 +222,8 @@
         {
           "type": "regexpReplaceInNote",
           "regexp": "(`BUTTON\\[personalReflection\\]`)",
-          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Personal Reflection\"%>]]**",
-          "regexpFlags": "g"
+          "regexpFlags": "g",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Personal Reflection\"%>]]**"
         },
         {
           "type": "command",
@@ -253,8 +249,8 @@
         {
           "type": "regexpReplaceInNote",
           "regexp": "(`BUTTON\\[readingJournal\\]`)",
-          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Reading Journal\"%>]]**",
-          "regexpFlags": "g"
+          "regexpFlags": "g",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Reading Journal\"%>]]**"
         },
         {
           "type": "command",
@@ -280,8 +276,8 @@
         {
           "type": "regexpReplaceInNote",
           "regexp": "(`BUTTON\\[skillMasteryLog\\]`)",
-          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Skill Mastery Log\"%>]]**",
-          "regexpFlags": "g"
+          "regexpFlags": "g",
+          "replacement": "**[[<%tp.date.now(\"YYYYMMDD\") + \" - Skill Mastery Log\"%>]]**"
         },
         {
           "type": "command",
@@ -330,6 +326,29 @@
         {
           "type": "command",
           "command": "obsidian-tasks-plugin:edit-task"
+        }
+      ]
+    },
+    {
+      "label": "Ausbildungsnachweis",
+      "icon": ":LiPenBox:",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "width:100%;align-self:center;",
+      "backgroundImage": "",
+      "tooltip": "Ausbildungsnachweis für den heutigen Tag erstellen",
+      "id": "btn-ausbildungsnachweis",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "regexpReplaceInNote",
+          "regexp": "(\\`BUTTON\\[btn\\-ausbildungsnachweis\\]\\`)",
+          "regexpFlags": "g",
+          "replacement": "<% tp.file.include(\"[[(TEMPLATE) btn-ausbildungsnachweis]]\") %>"
+        },
+        {
+          "type": "command",
+          "command": "templater-obsidian:replace-in-file-templater"
         }
       ]
     }

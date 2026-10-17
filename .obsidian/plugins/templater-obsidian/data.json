@@ -6,7 +6,7 @@
   "trigger_on_file_creation_mode": "none",
   "auto_jump_to_cursor": false,
   "jump_to_cursor_after_file_name": false,
-  "shell_path": "",
+  "shell_path": "/bin/zsh/",
   "user_scripts_folder": "99 - Meta/01 - Userscript",
   "folder_templates": [
     {
